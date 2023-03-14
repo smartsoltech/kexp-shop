@@ -11,4 +11,6 @@ def index(request):
     return HttpResponse(render(request, 'catalog/index.html'))
 def about(request):
     return HttpResponse(render(request, 'catalog/about.html'))
+def contacts(request):
+    return HttpResponse(render(request, 'catalog/contacts.html'))
     

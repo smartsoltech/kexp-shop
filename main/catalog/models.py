@@ -39,13 +39,19 @@ class Supplier(models.Model):
     phone_number = models.CharField(max_length=20)
     address = models.CharField(max_length=255)
     
+    def __str__(self) -> str:
+        return super().__str__()
+    
+    
 class Product(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image = models.ImageField(upload_to='products/')
+    image = models.ImageField(upload_to='catalog/products/img')
     supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
-
+    
+    def __str__(self) -> str:
+        return self.name
 class Customer(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
@@ -53,6 +59,8 @@ class Customer(models.Model):
     phone_number = models.CharField(max_length=20)
     address = models.CharField(max_length=255)
     
+    def __str__(self) -> str:
+        return super().__str__()
 class Order(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField()
@@ -66,7 +74,9 @@ class Order(models.Model):
         ('DELIVERED', 'Delivered'),
         ('CANCELLED', 'Cancelled'),
     ], max_length=20)
-
+    
+    def __str__(self) -> str:
+        return super().__str__()
 class Payment(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     payment_method = models.CharField(choices=[
@@ -78,7 +88,9 @@ class Payment(models.Model):
     ], max_length=20)
     date_paid = models.DateTimeField(auto_now_add=True)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
-
+    
+    def __str__(self) -> str:
+        return super().__str__()
 
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -86,10 +98,16 @@ class Review(models.Model):
     rating = models.IntegerField()
     comment = models.TextField()
     date = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self) -> str:
+        return super().__str__()
 
 class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=1)
     date_added = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self) -> str:
+        return super().__str__()
 

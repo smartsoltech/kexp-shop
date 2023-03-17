@@ -51,7 +51,7 @@ class Product(models.Model):
     supplier = models.ForeignKey(Supplier, on_delete=models.CASCADE)
     
     def __str__(self) -> str:
-        return self.name
+        return self.__str__()
 class Customer(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)

@@ -29,9 +29,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    os.getenv('HOST'),
-]
+ALLOWED_HOSTS = [os.getenv('HOST'),'192.168.219.102']
 
 
 # Application definition
@@ -129,4 +127,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/products/img/'
+# MEDIA_URL = '/catalog/products/img/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'catalog/products/img/')

@@ -1,0 +1,13 @@
+{% extends 'catalog/base.html'%}
+
+{% block title %} Карточка товара {% endblock %}
+
+{% block content %}
+<div calss="features">
+  <img src="{{ product.image}}" alt="image">
+  <h1>Карточка товара {{ product.name }}</h1>
+  <p> {{ product.description }}</p><br>
+  <h2>{{ product.price }}</h2>
+  <p> {{ supplier.name }}</p>
+</div>
+{% endblock %}

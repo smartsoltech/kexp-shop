@@ -1,10 +1,25 @@
+
 {% extends 'catalog/base.html'%}
 
 {%block title %}
-Страница о нас
+Каталог товаров
 {% endblock %}
 
-{%block content %}
-<h1>Главная страница</h1>
-<p>Параграф</p>
+
+{% block content %}
+    {% for el in product_name %}
+    <div class="row mt-2" >
+        <div class="col-md-3">
+        <div class="card">
+            <img src="{{ el.image.url }}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{el.name}}</h5>
+            <p class="card-text">{{el.price}}</p>
+            <a href="{% url 'iteminfo' el.id %}" class="btn btn-primary">Купить</a>            
+            </div>
+        </div>
+        </div>
+    </div>  
+    {% endfor %} 
+
 {% endblock %}

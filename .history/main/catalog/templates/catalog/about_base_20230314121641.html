@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключаем Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <!-- Навигационное меню -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">О нас</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Корзина</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Контент страницы -->
+    <div class="container my-5">
+        <h1>О нас</h1>
+        <p>Мы - Компания, доствляющая товары из Южной кореи.</p>
+        <hr>
+        <h2>Наша команда</h2>
+        <div class="row">
+            <!-- Карточка сотрудника 1 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Сотрудник 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Дарья</h5>
+                        <p class="card-text">Соучредитель</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка сотрудника 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Сотрудник 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Андрей</h5>
+                        <p class="card-text">Учредитель</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Карточка сотрудника 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="С

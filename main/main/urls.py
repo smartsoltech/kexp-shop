@@ -26,12 +26,12 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-     path('catalog/', include('catalog.urls')),
+     path('catalog/', include('catalog.urls'), name='cat'),
 ]
 
 
 urlpatterns += [
-    path('', RedirectView.as_view(url='.', permanent=True)),
+    path('', RedirectView.as_view(url='cat', permanent=True)),
 ]
 
 

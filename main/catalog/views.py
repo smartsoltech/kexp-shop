@@ -8,8 +8,14 @@ from django.views.generic import DetailView
 
 class ProductDetailView(DetailView):
     model = Product
-    template_name = 'catalog/productdetail.html'
+    template_name = './catalog/productdetail.html'
     context_object_name = 'product'
+ 
+class SupplierInfo(DetailView):
+    model = Supplier
+    template_name = './catalog/productdetail.html'
+    context_object_name = 'supplier'    
+    
     
 def index(request):
     product_name = Product.objects.all()

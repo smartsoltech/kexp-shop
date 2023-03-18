@@ -1,17 +1,43 @@
-{% extends 'catalog/contacts_base.html'%}
+{% extends 'catalog/base.html'%}
 
-{%block title %}
-Контакты
+{% block title %}
+Наши контакты
 {% endblock %}
 
-{%block phone %}
+{% comment %}
+{% block phone %}
 <p>+8210 5693 6103</p>
 {% endblock %}
 
-{%block address %}
+{% block address %}
 <p> Корея, сеул</p>
 {% endblock %}
 
-{%block email %}
+{% block email %}
 <p>choiak@k-exp.comс</p>
+{% endblock %} {% endcomment %}
+
+{% block content %}
+<body>
+  <div class="container">
+    <h1 class="my-5">Контактная информация</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Наш адрес</h2>
+        <p>Сеул, Республика Корея</p>
+      </div>
+      <div class="col-md-6">
+        <h2>Связаться с нами</h2>
+        <p>Телефон: +8 (210) 5693 -6103</p>
+        <p>Email: ak.choi@k-exp.com</p>
+      </div>
+    </div>
+  </div>
+  <!-- Подключение JS Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+  <div class = "container">
+  </div>
 {% endblock %}
+

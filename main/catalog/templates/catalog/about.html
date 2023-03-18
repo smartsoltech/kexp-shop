@@ -1,7 +1,35 @@
-{% extends 'catalog/about_base.html'%}
+{% extends 'catalog/base.html'%}
 
 {%block title %}
 Страница о нас
 {% endblock %}
 
+{% block content %}
+<div class="container my-5">
+    <h1>О нас</h1>
+    <p>Мы - Компания, доствляющая товары из Южной кореи.</p>
+    <hr>
+    <h2>Наша команда</h2>
+    <div class="row">
+        <!-- Карточка сотрудника 1 -->
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Сотрудник 1">
+                <div class="card-body">
+                    <h5 class="card-title">Дарья</h5>
+                    <p class="card-text">Соучредитель</p>
+                </div>
+            </div>
+        </div>
+        <!-- Карточка сотрудника 2 -->
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Сотрудник 2">
+                <div class="card-body">
+                    <h5 class="card-title">Андрей</h5>
+                    <p class="card-text">Учредитель</p>
+                </div>
+            </div>
+        </div>
+{% endblock %}
 

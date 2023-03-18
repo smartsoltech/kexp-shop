@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+
 class MyModelName(models.Model):
     """
     A typical class defining a model, derived from the Model class.
@@ -28,9 +29,6 @@ class MyModelName(models.Model):
 
 my_field_name = models.CharField(max_length=20, help_text="Enter field documentation")
 
-from django.db import models
-
-
 #Модели таблиц
 
 class Supplier(models.Model):
@@ -41,8 +39,6 @@ class Supplier(models.Model):
     
     def __str__(self) -> str:
         return super().__str__()
-    
-    
 class Product(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
@@ -91,7 +87,6 @@ class Payment(models.Model):
     
     def __str__(self) -> str:
         return super().__str__()
-
 class Review(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
@@ -101,7 +96,6 @@ class Review(models.Model):
     
     def __str__(self) -> str:
         return super().__str__()
-
 class Cart(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

@@ -16,7 +16,9 @@ from dotenv import find_dotenv, load_dotenv
 
 load_dotenv(find_dotenv('.env.local'))
 load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -127,5 +129,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# MEDIA_URL = '/catalog/products/img/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'catalog/products/img/')
+MEDIA_URL = '/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/')
